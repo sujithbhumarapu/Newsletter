@@ -37,7 +37,7 @@ app.post("/",function(req,res){
      const url="https://us21.api.mailchimp.com/3.0/lists/541a2adb89";
      const options={
         method:"POST",
-        auth: "sujith:4b58868ce21c4e705aadb00c6ce2bbc8-us21"
+        auth: "sujith:8ed9b6f8b039de18f37d73c06dcb20be-us21"
 
      }
      const request=https.request(url,options,function(response){
@@ -66,7 +66,7 @@ app.post("/",function(req,res){
 app.post("/failure",function(req,res){
     res.redirect("/");
 });
-app.listen(3000);
+app.listen(process.env.POST || 3000);
 //b6b42fc6714342e958ba2870fc572120-us21
 //541a2adb89
 //4b58868ce21c4e705aadb00c6ce2bbc8-us21
